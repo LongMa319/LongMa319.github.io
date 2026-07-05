@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 让网页在手机端也能正常缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Long Ma's Homepage</title>
+    <!-- 引入CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- 上半部分：个人信息 -->
+    <section class="hero">
+        <div class="profile">
+
+            <!-- 
+            个人照片：
+            1. 把照片命名为 photo.jpg
+            2. 和 index.html 放在同一个文件夹
+            -->
+            <img src="images/photo.jpg" alt="Profile Photo">
+
+            <div class="profile-info">
+                <!-- 姓名 -->
+                <h1>Long Ma</h1>
+
+                <!-- 邮箱、职称、地点 -->
+                <div class="meta-line1">
+                    <span>Postdoctoral Research Fellow | The Chinese University of Hong Kong</span>
+                </div>
+
+                <!-- 个人说明 -->
+                <div class="intro">
+                    <p>I am currently a Postdoctoral Research Fellow at CUHK, working with Prof. Pheng-Ann Heng. My
+                        research focuses on visual perception under adverse conditions, with a current interest in
+                        bilevel optimization-based learning paradigms for vision tasks.</p>
+                </div>
+
+                <div class="meta-line2">
+                    <a href="mailto:malone94319@gmail.com" class="email-link">
+                        ✉️ malone94319@gmail.com
+                    </a>
+                    <a href="https://scholar.google.com.pr/citations?hl=zh-CN&pli=1&user=QeCRo9sAAAAJ" target="_blank"
+                        class="scholar-link">
+                        🎓 Google Scholar
+                    </a>
+                    <!-- <a href="Long Ma‘s CV.pdf" target="_blank" class="scholar-link">
+                        💼 CV
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 标签栏 -->
+    <nav class="tabs-sticky">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'news')">News</button>
+            <button class="tab-button" onclick="openTab(event, 'publications')">Selected Publications</button>
+            <button class="tab-button" onclick="openTab(event, 'services')">Services</button>
+            <button class="tab-button" onclick="openTab(event, 'honors')">Awards and Honors</button>
+            <!-- <button class="tab-button" onclick="openTab(event, 'experience')">Experience</button> -->
+        </div>
+    </nav>
+
+    <!-- 下半部分：标签内容 -->
+    <main class="main">
+        <div class="content-card">
+
+            <!-- News 标签内容 -->
+            <div id="news" class="tab-content active">
+                <!-- <div class="timeline">
+
+                    <div class="year-row">
+                        <div class="year">2026</div>
+                        <div class="month-list">
+                            <div class="news-item">
+                                <div class="news-date">April</div>
+                                <p>One paper accepted by SCIS.</p>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-date">March</div>
+                                <p>One paper accepted by IEEE TIP.</p>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-date">February</div>
+                                <p>Two papers accepted by CVPR and one paper accepted by Pattern Recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="year-row">
+                        <div class="year">2025</div>
+                        <div class="month-list">
+                            <div class="news-item">
+                                <div class="news-date">June</div>
+                                <p>One paper accepted by IEEE TPAMI.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <div class="card">
+                    <p><span class="p-date-button">Apr. 2026</span>&nbsp; One paper accepted by SCIS.</p>
+                </div>
+                <div class="card">
+                    <p><span class="p-date-button">Mar. 2026</span>&nbsp; One paper accepted by IEEE TIP.</p>
+                </div>
+                <div class="card">
+                    <p><span class="p-date-button">Feb. 2026</span>&nbsp; Two papers accepted by CVPR and one paper
+                        accepted by Pattern Recognition.</p>
+                </div>
+                <div class="card">
+                    <p><span class="p-date-button">Jun. 2025</span>&nbsp; One paper accepted by IEEE TPAMI.</p>
+                </div>
+            </div>
+
+            <!-- Publications 标签内容 -->
+            <div id="publications" class="tab-content">
+                <!-- <p class="small-note">
+                    † Corresponding Author
+                </p> -->
+
+                <div class="publication">
+                    <img src="images/paper-CVPR2026.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>BiPA: Bilevel Prompt Adaptation for Underwater Instance Segmentation</h3>
+                        <p><strong>Long Ma</strong>, Haoze Zheng, Yuhang Mao, Jinyuan Liu, Chengpei Xu, Xinwei Xue, Yi
+                            Wang, Xiangjian He, Weimin Wang</p>
+                        <p>CVPR 2026</p>
+                        <p>
+                            <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BiPA_Bilevel_Prompt_Adaptation_for_Underwater_Instance_Segmentation_CVPR_2026_paper.pdf"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Ma_BiPA_Bilevel_Prompt_CVPR_2026_supplemental.pdf"
+                                class="pdf-button" target="_blank">SUPP</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/ZeAstra/BiPA" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-CVPR2026-1.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Benchmarking Endoscopic Surgical Image Restoration and Beyond</h3>
+                        <p>Jialun Pei, Diandian Guo, Donghui Yang, Zhixi Li, Yuxin Feng, <strong>Long
+                                Ma<sup>†</sup></strong>, Bo
+                            Du, Pheng-Ann Heng</p>
+                        <p>CVPR 2026</p>
+                        <p>
+                            <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Pei_Benchmarking_Endoscopic_Surgical_Image_Restoration_and_Beyond_CVPR_2026_paper.pdf"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Pei_Benchmarking_Endoscopic_Surgical_CVPR_2026_supplemental.pdf"
+                                class="pdf-button" target="_blank">SUPP</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/PJLallen/Surgical-Image-Restoration" class="pdf-button"
+                                target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-SCIS2026.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Practical Exposure Correction via Compensation</h3>
+                        <p><strong>Long Ma</strong>, Nan An, Jinyuan Liu, Xin Fan, Zhongxuan Luo, Deyu Meng, Risheng
+                            Liu</p>
+                        <p>Science China Information Science 2026 (JCR-Q1, IF: 7.6)</p>
+                        <p>
+                            <a href="https://www.sciengine.com/doi/pdf/B70958DD590C4340818FB2DDDE720C2F"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/vis-opt-group/PEC" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-TIP2026.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Enhancing Underwater Images via Resonant Fusion</h3>
+                        <p>Xinwei Xue, Zimeng Xu, Kaixin Wang, Jincheng Yuan, Jingchun Zhou, Chengpei Xu, Xiaoke Shang,
+                            <strong>Long Ma<sup>†</sup></strong>, Weimin Wang
+                        </p>
+                        <p>IEEE TIP 2026 (JCR-Q1, IF: 13.7)</p>
+                        <p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11433528?casa_token=wt6FuCjZU_4AAAAA:cQHP-wdm3c--t8b_Ap_YqtuAg_m1c3b1NyFH-eNCmAjwSfYyih44QaoaX1YFIGSy5ViRtn_i"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/CircleQa/ReFu-main" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-PR2026.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>SWG-Fusion: Soft Weather-guided Multimodal Fusion with VLM-assistance for BEV Object
+                            Detection under Harsh Weather</h3>
+                        <p>Weimin Wang, Ruifeng Nie, Yingchi Liu, <strong>Long Ma<sup>†</sup></strong>, Chengpei Xu, Qi
+                            Jia, Yu
+                            Liu, Na Lei </p>
+                        <p>Pattern Recognition 2026, 178: 113398 (JCR-Q1, IF: 7.6)</p>
+                        <p>
+                            <a href="https://pdf.sciencedirectassets.com/272206/1-s2.0-S0031320326X20039/1-s2.0-S0031320326003638/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDsaCXVzLWVhc3QtMSJHMEUCICxUxNNbzu%2BC6Z8QdzLgbLy7Da78wFYHI1WFvnei4vJQAiEA817TeWE06qqR6ZZqkoHQ0QC5WWaevAab4dsnFPM4T6oqswUIBBAFGgwwNTkwMDM1NDY4NjUiDHHpt9Zth0wa0N2yGiqQBQXSOyYIW5FBPFlVRJ2B83VGgZv%2F4IbCQ8xh87Ubfl8MNTEEf63c%2FgGpTG7ltigNZBIb88N59NuAjqbZXCxcQqAaM0D54cBmZ%2FvMs5cboBMorRCU%2Bed62O3u7hP%2BtOG8s%2FUXHLEZULcD1pzbvV%2FBt9e4%2FrPIuCcoVOqk4hNr1GrDtDKl%2FVpbUheNGW%2Ff%2FXmpD604xft3GiUc5kk5JCU9haBNzc5fJk1%2BqK84Ks1UwOoSno%2FIN1uIS16wOMMvxoyEZkicke2B7wi04qpdAPkJvPGI8Kyzxiys44IG7FXIuPgIo6vK3AyQLQq8jFrzytqlfOsD02I3RpBCdef9NKHvrhJmN25YR%2Be92mZjN0eftisfhf%2FA5T1lcfDZV6VJfR5AbQOUa0Voa7E3dR4rm637OFUOJ6PT6E2o1p4q0FUrcAjEtbB6SVf7zvPxVrlj3v5hk3zKA1HaWEy7aVaUiJ1Ql9zXlZUbSG0DACviTZoOeFxD4eSofZYXqJZoovg7Iw2Ytr4sO4K3pqA3rmwOAI1JsTRq3OWaH%2BNcsJgVduqboGyKEYAip84FTqXJORy0v%2FnC3X4dwF4OPMEOtddC3CBUEzsGeGHeslEhsmy2TqEJBzTCTX6JiVuY1kRi%2BkMM4%2BKk6s8lqcLb6DxHn53HxRNzsRYVSTouAKQy4k3x3bEZtqeDvdnKKjAjxBRhkqOkT9qvmJqkgPVEaXmDydI0IqZf25PH57LADHrQ64V06vX%2Fxvf84CIt9ZJyqDaF3rKSDMQ48qf57ttd4Bnfcu37o%2BSkKIB3Y6EUE4LD4rzvQBKdS9N1wrNZGh1EAWT4nlsorAo1w4JPtlyyvTC8Ap8Kdf8WwMzwGjsjgPbRYs2LeP3bLyHaMJ3MnNIGOrEBVVBCMT7NYLiadwbfaPQ5L9e3JaF6zXA7EpXX1yADAZ1GjU4WG1oQXyI9Bq1vFlmNI4VnPuzt4O4XFF8RK6o77Cs8zJ%2BIo%2BP3Sj%2BuRrXeyh98YBs%2FPtAe4%2FBsP6%2FKkFvI4CrY3kNMPQ7us8E4gWD4Nmq2BA4A9H6R0x61d%2BrL8pZpNG1ZvSArRdSjkQ5FDetoQGPK3sxsADFhYTxRo94BYX%2FwSMBP2GFOISIYktRj%2F5Gm&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260703T040833Z&X-Amz-SignedHeaders=host&X-Amz-Expires=299&X-Amz-Credential=ASIAQ3PHCVTYZLTJJNNC%2F20260703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=108ae6405a9a715d8ce7cbf6db49891609ef9e7b64c4b98017ba5661d096cfec&hash=e304250239ae5f5fa3b30b5485c05cb4301ac313fdaeac4d542fcb7c9130f462&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0031320326003638&tid=spdf-66285955-1a62-452c-a42f-8e65ac5391a3&sid=ac27a9ee81c3b949323ab953edb2ecd8a1bagxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=131700535b545e525b57&rr=a1530799cc9d0432&cc=us"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/dut-mdmu/SWG-Fusion" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-TPAMI2025.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Learning with Self-Calibrator for Fast and Robust Low-Light Image Enhancement</h3>
+                        <p><strong>Long Ma</strong>, Tengyu Ma, Chengpei Xu, Jinyuan Liu, Xin Fan, Zhongxuan Luo,
+                            Risheng Liu</p>
+                        <p>IEEE TPAMI 2025, 47(10): 9095-9112 (JCR-Q1, IF: 18.6)</p>
+                        <p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11072373?casa_token=ElvsC6k0hckAAAAA:tkRm9iJnZjNHRm6KWbpiLEYzBIqwq4Y_ytGGhiSzHjtozwpc5HP2jxO1B-ibe2znGK0u64pr"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/vis-opt-group/SCI" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-IJCV2025.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Bilevel Fast Scene Adaptation for Low-Light Image Enhancement</h3>
+                        <p><strong>Long Ma</strong>, Dian Jin, Nan An, Jinyuan Liu, Xin Fan, Zhongxuan Luo, Risheng Liu
+                        </p>
+                        <p>IJCV 2025, 133: 8234-8252 (JCR-Q1, IF: 9.3)</p>
+                        <p>
+                            <a href="https://link.springer.com/article/10.1007/s11263-023-01900-z" class="pdf-button"
+                                target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <!-- <a href="" class="pdf-button" target="_blank">SUPP</a>
+                            &nbsp;-->
+                            <a href="https://github.com/vis-opt-group/BL" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-CVPR2025.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>CoA: Towards Real Image Dehazing via Compression-and-Adaptation</h3>
+                        <p><strong>Long Ma</strong>, Yuxin Feng, Yan Zhang, Jinyuan Liu, Weimin Wang, Guang-Yong Chen,
+                            Chengpei Xu, Zhuo Su</p>
+                        <p>CVPR 2025: 11197-11206</p>
+                        <p>
+                            <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_CoA_Towards_Real_Image_Dehazing_via_Compression-and-Adaptation_CVPR_2025_paper.pdf"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/fyxnl/COA" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-IF2025.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Degradation-Decoupled and Semantic-Aggregated Cross-space Fusion for Underwater Image
+                            Enhancement</h3>
+                        <p>Xinwei Xue, Jincheng Yuan, Tengyu Ma, <strong>Long Ma<sup>†</sup></strong>, Yi Wang</p>
+                        <p>Information Fusion 2025, 118: 102927 (JCR-Q1, IF: 15.5)</p>
+                        <p>
+                            <a href="https://pdf.sciencedirectassets.com/272144/1-s2.0-S1566253525X00026/1-s2.0-S156625352400705X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDwaCXVzLWVhc3QtMSJIMEYCIQClJbZWcC9MxhvseIte73teYLbHFEYOIGV4uBSQM5Y7LAIhAJLzeY0MzgCzmDq6Z0e3kgQXFL3l2QuolgXJ5pNdgkKcKrMFCAQQBRoMMDU5MDAzNTQ2ODY1IgzvEY3VmdAiym4G5ZcqkAXeXmNnf41AH%2FBAaOmrTzG3HbKQPqzK2f7v%2B3nFmRAFxxVsLTqr04%2FogxjpeSxAhqVoPceGR5n9L%2FBmb5HwdCNa%2F2EDcsN%2BBG9bZIo369%2B1tyRFMXpUavNZp%2BOBjPas8MIrKOhgcH33%2BjdITl98RWZV3viDAfSe6Mw5GJ8foFwEHQwzAFdKQy2P98fJm5u%2BKidiCFjU2Bst5uI4Mt7mIUwmYn04PMRD0SqrGuMKy6%2Bbt99%2BV7S%2BZfISYXG2X8FdMZVTK1pV7X5n0yKNEdrRL%2B0%2Bgwc87h%2BeMXHNjrRGMBkwaMW9n%2Bg0GmXH3RIJfyjk4cPgHJhnVD4SNurYAVzvh6o5MGKFkQzAoTkoNeYQpA4arJ2FpuAsXWomZK%2BdeJiEGhA62CLnN%2F%2B5HOcLOU3mMPzE6KiZ8xsMtwuvW9aBc6a%2BzDBI3N7bR9N2MyQ4ZlccPM1%2F0nRthvVZDpajwmAp0dzglZ5WCPUuA0gJu6S5Ka84sNUOcLZPQhxsptUAT4P0TBysYDNe262r6s2n2FhOjXn4JryE7uRvKKSiWH7Y22hhpHeFLUb4FHqmJn%2FGXyulXbPQN%2BzwCKQpzIkGo7hgAs9%2BJ2fXI4cXMvXUG6TtYfOqxlkpB4OcE9gjG9LCQpYhhSLc99AOi6Mkxmq4204sNWPNOWL%2Ft3c1ZJbM%2Fg6QaY3O6j0apCReEdhnr7%2FZfIGuYfWooLsfqnb4S5ircQOhjJjI9rT7HiFau2wR3HgycHl2%2BLejN20V0g2x%2F0PFGCVIS3nRWQFvI6ExVhnaEcaL9r0pzGhsfvPk9%2BokXqocjmDrVPl4F2v45mkihGfY5de%2BunZZY%2BRGQoblR2wcbCiuAKG6noG3oMHIbzXFnWmsd9eNRTCy0ZzSBjqwAaohQptVZTcm%2FZj1uRhN6D%2BPgivG%2F7xYucPGgVuy0e9%2BKW1edz4agSa%2FrcAHgYH7bWjQPpgeVsfdLHY%2B5kRDwrHeGuCmqa1iywzkjF3JaIRbJqlcQOTig0wJDYE5doFRfXbOZnb6SAZ4J21oUruU5tYkpTV1OxWlga1l69rLuXSbxmcXLcSf3gvAZ3T%2BYem5R0KbPPNLiqXHdPd8j9ldDQUNK62MEavxBYBz3gkBUma0&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260703T040711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYW6S2MSIX%2F20260703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=1ba5b3bb5830a2e5eb310543a092602eb08045a6795a6083968d7b8ffabebbaa&hash=a21dab567aabc739767d46fcba4892e1f4b34f9d7c78d801a6284e42e5936712&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S156625352400705X&tid=spdf-c3d48099-7107-4419-abe2-e0dd46ada7cd&sid=ac27a9ee81c3b949323ab953edb2ecd8a1bagxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=131700535b545e505b56&rr=a1530598491f0432&cc=us&__cf_chl_f_tk=PidO4byJ_hBNDbJAYWgR6pFxg_psFDDubL.tYzfgjTk-1783051633-1.0.1.1-boVbDcEcxr1JARAv1DoygFWKLsxCBzPcXDM4H6M1ITI"
+                                class="pdf-button" target="_blank">PDF</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-ACMMM2024.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Seeing Text in the Dark: Algorithm and Benchmark</h3>
+                        <p>Chengpei Xu, Hao Fu, <strong>Long Ma<sup>†</sup></strong>, Wenjing Jia, Chengqi Zhang, Feng
+                            Xia, Xiaoyu
+                            Ai, Binghao Li, Wenjie Zhang</p>
+                        <p>ACM Multimedia 2024: 2870-2878</p>
+                        <p>
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3664647.3680728?__cf_chl_f_tk=Ji8gbtb52RvAYQRCSkhAJMIwFmsL6orVO_.3QJB5DgE-1783050749-1.0.1.1-MCDgno.yrWYYMhdtYjzyHcDIpqgzi9tdZxaya7otAAA"
+                                class="pdf-button" target="_blank">PDF</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-CVPR2022.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Toward Fast, Flexible, and Robust Low-Light Image Enhancement</h3>
+                        <p><strong>Long Ma</strong>, Tengyu Ma, Risheng Liu, Xin Fan, Zhongxuan Luo</p>
+                        <p>CVPR 2022: 5637-5646 (Oral)</p>
+                        <p>
+                            <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ma_Toward_Fast_Flexible_and_Robust_Low-Light_Image_Enhancement_CVPR_2022_paper.pdf"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://openaccess.thecvf.com/content/CVPR2022/supplemental/Ma_Toward_Fast_Flexible_CVPR_2022_supplemental.pdf"
+                                class="pdf-button" target="_blank">SUPP</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/vis-opt-group/SCI" class="pdf-button" target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-TMM2023.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Low-Light Image Enhancement via Self-Reinforced Retinex Projection Model</h3>
+                        <p><strong>Long Ma</strong>, Risheng Liu, Yiyang Wang, Xin Fan, Zhongxuan Luo</p>
+                        <p>IEEE TMM 2022, 25: 3573-3586 (JCR-Q1, IF: 8.4)</p>
+                        <p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9743313?casa_token=hB43RwBwyFkAAAAA:OKE-nG4GQ6O4v5bxnRef-sVtt82CrdqlH00St1KvSCKucc0oVCUQFos_xJYjR2vkJprXwA6s"
+                                class="pdf-button" target="_blank">PDF</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-ACMMM2022.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Best of Both Worlds: See and Understand Clearly in the Dark</h3>
+                        <p>Xinwei Xue, Jia He, <strong>Long Ma<sup>†</sup></strong>, Yi Wang, Xin Fan, Risheng Liu</p>
+                        <p>ACM Multimedia 2022: 2154-2162</p>
+                        <p>
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3503161.3548259" class="pdf-button"
+                                target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/k914/contrastive-alternative-learning" class="pdf-button"
+                                target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <img src="images/paper-TNNLS2022.png" alt="Publication Image">
+                    <div class="publication-info">
+                        <h3>Learning Deep Context-Sensitive Decomposition for Low-Light Image Enhancement</h3>
+                        <p><strong>Long Ma</strong>, Risheng Liu, Jiaao Zhang, Xin Fan, Zhongxuan Luo</p>
+                        <p>IEEE TNNLS 2021, 33(10): 5666-5680 (JCR-Q1, IF: 8.9)</p>
+                        <p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9420270?casa_token=Gtof9l2x4OwAAAAA:q7jCOfvbfDVvzY-ZG5Z5Y1ZdBA4KnvOkLnBF1gn9PCl91Lho0uuMJpDKMD5ykNBUH3BpE4NE"
+                                class="pdf-button" target="_blank">PDF</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://github.com/KarelZhang/CSDNet-CSDGAN" class="pdf-button"
+                                target="_blank">CODE</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Services 标签内容 -->
+            <div id="services" class="tab-content">
+
+                <div class="section-label">Guest Editor</div>
+                <div class="card">
+                    <ul>
+                        <li>Image and Vision Computing.</li>
+                    </ul>
+                </div>
+
+                <div class="section-label2">Program Committee Member</div>
+                <div class="card">
+                    <ul>
+                        <li>CVPR, ICCV, ICML, NeurIPS, ICLR, IJCAI, AAAI, ACM Multimedia, ECCV, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="section-label2">Journal Reviewer</div>
+                <div class="card">
+                    <ul>
+                        <li>IEEE TPAMI, IJCV, IEEE TIP, IEEE TNNLS, IEEE TMM, IEEE TCSVT, IEEE TGRS, etc.</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="card">
+                    <h3>Community and Organization</h3>
+                    <ul>
+                        <li>Organizer, Reading Group on AI Applications and Intelligent Systems, 2024 - Present.</li>
+                        <li>Session Volunteer, Academic Conference Name, 2025.</li>
+                        <li>Member, Research Group / Laboratory / Academic Organization, 2024 - Present.</li>
+                        <li>Coordinator, Internal seminar series on AI product design and human-centered systems, 2024.
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+
+            <!-- Education & Honors 标签内容 -->
+            <div id="honors" class="tab-content">
+
+                <div class="section-block">
+                    <!-- <div class="section-label">Awards and Honors</div> -->
+
+                    <div class="card">
+                        <p><span class="p-date-button">2025</span> &nbsp;World’s Top 2% Scientists (Stanford University
+                            & Elsevier) (1/1)
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <p><span class="p-date-button">2025</span> &nbsp;ICML Outstanding Reviewer (1/1)</p>
+                    </div>
+
+                    <div class="card">
+                        <p><span class="p-date-button">2024</span> &nbsp;China Society of Image and Graphics (CSIG)
+                            Doctoral Dissertation Incentive Program
+                            Nomination Award (1/1)</p>
+                    </div>
+
+                    <div class="card">
+                        <p><span class="p-date-button">2023</span> &nbsp;ACM Dalian Doctoral Dissertation Award (1/1)
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <p><span class="p-date-button">2023</span> &nbsp;The Excellent Paper Award by The Chinese
+                            Journal of Image and Graphics (1/3)</p>
+                    </div>
+
+                    <div class="card">
+                        <p><span class="p-date-button">2023</span> &nbsp;First Prize of Liaoning Natural Science
+                            Academic Achievement Award (3/5)</p>
+                    </div>
+
+                    <div class="card">
+                        <p><span class="p-date-button">2022</span> &nbsp;PRCV Best Poster Award (2/3)</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div id="experience" class="tab-content">
+
+                <div class="section-block">
+
+                    <div class="section-label">Professional Experience</div>
+
+                    <div class="card">
+                        <h3>05/2026-Present The Chinese University of Hong Kong</h3>
+                        <p>
+                            <span class="p-date-button" target="_blank">2026-Present</span> <strong>The Chinese
+                                University of
+                                HongKong</strong> as Research Fellow in Department of Computer Science and Engineering
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>05/2023–05/2026 Dalian University of Technology</h3>
+                        <p>Postdoctoral Research Fellow in Software Engineering</p>
+                    </div>
+
+                    <div class="section-label2">Education</div>
+
+                    <div class="card">
+                        <h3>09/2016–03/2023 Dalian University of Technology</h3>
+                        <p>PhD and Master in Software Engineering</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>09/2012–06/2016 Northeast Agricultural University</h3>
+                        <p>Bachelor in Information and Computational Science</p>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
