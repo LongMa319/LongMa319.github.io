@@ -42,8 +42,8 @@ body {
 
 /* 个人照片：圆角长方形 */
 .profile img {
-    width: 140px;
-    height: 160px;
+    width: 154px;
+    height: 176px;
     object-fit: cover;
     border-radius: 15px;
     /* 照片阴影 */
